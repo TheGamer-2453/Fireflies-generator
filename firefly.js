@@ -26,10 +26,22 @@ class firefiy {
         this.angle = Math.random()* Math.Pi* 2
         this.speedMultiplier = Math.random()* 0.05 + 0.02;
     }
-update() {
+    update() {
     this.angle += this.speedMultiplier;
     this.x += this.vx + Math.sin(this.angle) * 0.5;
     this.y += this.vy;     
     this.alpha -= this.decay;
-}
+    }
+
+    draw() {
+        ctx.save();
+        ctx.globalAlpha = this.alpha;
+        const gradient = ctx.createRadialGradient(
+            this.x, this.y, 0,
+            this.x, this.y, this.radius * 4
+        );
+        gradient.addColorStop(0, `rgba(230,255,99,1)`);
+        gradient.addColorStop(0.2, 'rgba()163,245,76,0.8');
+        
+    }
 }
