@@ -1,5 +1,4 @@
-
-        * {
+ * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -9,29 +8,25 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            
-            background-image: url('dark forest.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #0a0f1d;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        
         body::after {
             content: '';
             position: absolute;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(10,15,29,0.2) 0%, rgba(5,8,15,0.6) 100%);
+            background: radial-gradient(circle, rgba(26,38,57,0.4) 0%, rgba(10,15,29,1) 80%);
             z-index: 1;
             pointer-events: none;
         }
 
         #canvas {
+            background: url("dark\ forest.pngS");
             position: absolute;
             top: 0;
             left: 0;
@@ -43,8 +38,7 @@
         .instructions {
             position: absolute;
             z-index: 3;
-            color: rgba(255, 255, 255, 0.6);
-            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+            color: rgba(255, 255, 255, 0.4);
             text-align: center;
             pointer-events: none;
             font-size: 1.2rem;
@@ -53,7 +47,6 @@
         }
 
         @keyframes pulse {
-            0% { opacity: 0.4; }
-            100% { opacity: 0.8; }
+            0% { opacity: 0.3; }
+            100% { opacity: 0.7; }
         }
-    
